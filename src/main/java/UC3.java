@@ -36,27 +36,11 @@ public class UC3 {
         // UC3: Take user input
         int slot = getUserSlot();
         System.out.println(currentPlayer + " selected slot: " + slot);
-
-        // UC4: Convert slot → row & column
-        int row = getRowFromSlot(slot);
-        int col = getColFromSlot(slot);
-
-        System.out.println("Mapped Position -> Row: " + row + ", Column: " + col);
     }
 
-    // UC3
     static int getUserSlot() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a slot number (1-9): ");
         return scanner.nextInt();
-    }
-
-    // UC4
-    static int getRowFromSlot(int slot) {
-        return (slot - 1) / 3;
-    }
-
-    static int getColFromSlot(int slot) {
-        return (slot - 1) % 3;
     }
 }
